@@ -8,5 +8,6 @@ namespace Ecommerce.Core.Interface
 {
     public interface IPostCagegoryRepository : IRepository<PostCategory>
     {
+
     }
 }
