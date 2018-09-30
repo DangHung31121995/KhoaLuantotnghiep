@@ -1,0 +1,57 @@
+{
+    "Login": {
+        "Title": "Login Blog Simple",
+        "lblUserName": "Username",
+        "lblPassword": "Password",
+        "btnLogin": "Login",
+        "btnForgotPassword": "Forgot Password?",
+        "Error": {
+            "UserName": {
+                "required": "Username is required.",
+                "email": "Username must be is email."
+            },
+            "Password": {
+                "required": "Password is required."
+            }
+        }
+    },
+    "Main": {
+        "Post": {
+            "Title": "Post Manager"
+        },
+        "PostCategory": {
+            "Title": "Post Category Manager"
+        }
+    },
+    "Common": {
+        "btnCreate": "Create",
+        "btnEdit": "Edit",
+        "btnDelete": "Delete",
+        "Language": {
+            "Title": "Languages",
+            "LblEnglish": "English",
+            "LblVietNam": "VietNamese"
+        },
+        "btnSave": "Save",
+        "btnCancel": "Cancel",
+        "STT":"No.",
+        "Action": "Action"
+    },
+    "PostCategory": {
+        "lblCategoryName": "Name",
+        "lblCategoryDescription": "Description",
+        "lblParentPostCategory": "Parent Category",
+        "lblUrl": "Url",
+        "lblMetaData": "Meta data",
+        "lblMetaDescription": "Meta Description",
+        "lblIsPublic": "Public",
+        "lblPostCategoryModalCreate": "Create New Post Category",
+        "lblPostCategoryModalEdit": "Update Post Category",
+        "Errors": {
+            "CategoryName": {
+                "required": "Name must be required",
+                "POST_CATEGORY_NAME_REQUIRED" : "Name must be required"
+            }
+        }
+    }
+}

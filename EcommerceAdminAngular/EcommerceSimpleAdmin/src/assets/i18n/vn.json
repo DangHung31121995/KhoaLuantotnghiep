@@ -1,0 +1,57 @@
+{
+    "Login": {
+        "Title": "Đăng nhập Blog Simple",
+        "lblUserName": "Tài khoản",
+        "lblPassword": "Mật khẩu",
+        "btnLogin": "Đăng nhập",
+        "btnForgotPassword": "Quên mật khẩu?",
+        "Error": {
+            "UserName": {
+                "required": "Tên đăng nhập là bắt buộc.",
+                "email": "Tên đăng nhập phải là email."
+            },
+            "Password": {
+                "required": "Mật là bắt buộc."
+            }
+        }
+    },
+    "Main": {
+        "Post": {
+            "Title": "Quản lý bài đăng"
+        },
+        "PostCategory": {
+            "Title": "Quản lý danh mục"
+        }
+    },
+    "Common": {
+        "btnCreate": "Thêm mới",
+        "btnEdit": "Sửa",
+        "btnDelete": "Xóa",
+        "Language": {
+            "Title": "Ngôn ngữ",
+            "LblEnglish": "Tiếng Anh",
+            "LblVietNam": "Tiếng Việt"
+        },
+        "btnSave": "Lưu",
+        "btnCancel": "Hủy",
+        "STT": "STT",
+        "Action" : "Thao tác"
+    },
+    "PostCategory": {
+        "lblCategoryName": "Tên",
+        "lblCategoryDescription": "Mô tả",
+        "lblParentPostCategory": "Danh mục cha",
+        "lblUrl": "Đường dẫn",
+        "lblMetaData": "Meta data",
+        "lblMetaDescription": "Meta Description",
+        "lblIsPublic": "Hiển thị",
+        "lblPostCategoryModalCreate": "Thêm mới danh mục tin",
+        "lblPostCategoryModalEdit": "Chỉnh sửa danh mục tin",
+        "Errors": {
+            "CategoryName": {
+                "required": "Tên danh mục là bắt buộc",
+                "POST_CATEGORY_NAME_REQUIRED" : "Tên danh mục là bắt buộc"
+            }
+        }
+    }
+}
