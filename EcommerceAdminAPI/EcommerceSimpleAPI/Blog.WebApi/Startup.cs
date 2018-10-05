@@ -97,7 +97,6 @@ namespace Ecommerce.WebApi
 
         public void SetUpService(IServiceCollection services)
         {
-
             ///
             /// Config jwtOption Authen Service
             ///
@@ -152,6 +151,7 @@ namespace Ecommerce.WebApi
             //services.AddScoped<IUserRepository, UserRepository>();
             //Service
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuditService, AuditService>();
             services.AddScoped<IPostCategoryService, PostCategoryService>();
             services.AddScoped<IPostService, PostService>();
             services.AddTransient<IJwtFactory, JwtFactory>();
@@ -189,23 +189,23 @@ namespace Ecommerce.WebApi
             }).AddViewLocalization()
                 .AddDataAnnotationsLocalization();
 
-              services.AddSwaggerGen(c =>
-                        {
-                            c.SwaggerDoc("v1", new Info { Title = "Ecommerce API", Version = "v1" });
-                            var security = new Dictionary<string, IEnumerable<string>>
-                            {
+            services.AddSwaggerGen(c =>
+                      {
+                          c.SwaggerDoc("v1", new Info { Title = "Ecommerce API", Version = "v1" });
+                          var security = new Dictionary<string, IEnumerable<string>>
+                          {
                                 {"Bearer", new string[] { }},
-                            };
+                          };
 
-                            c.AddSecurityDefinition("Bearer", new ApiKeyScheme
-                            {
-                                Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                                Name = "Authorization",
-                                In = "header",
-                                Type = "apiKey"
-                            });
-                            c.AddSecurityRequirement(security);
-                        });
+                          c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                          {
+                              Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                              Name = "Authorization",
+                              In = "header",
+                              Type = "apiKey"
+                          });
+                          c.AddSecurityRequirement(security);
+                      });
 
         }
     }

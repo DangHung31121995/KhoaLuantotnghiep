@@ -26,7 +26,7 @@ namespace Ecommerce.Service.Service
 
         public Guid Add(PostViewModel post, Guid currentUserId)
         {
-            var entity = Mapper.Map<PostViewModel, Post>(post);
+            var entity = new PostViewModel().Map(post);
 
             entity.Id = Guid.NewGuid();
             entity.CreateBy = currentUserId;
@@ -91,7 +91,7 @@ namespace Ecommerce.Service.Service
                 throw new EcommerceException("POST_NOT_FOUND");
             }
 
-            return Mapper.Map<Post, PostViewModel>(post);
+            return new PostViewModel().Map(post);
         }
 
         public void Save()
@@ -114,7 +114,7 @@ namespace Ecommerce.Service.Service
                 return false;
             }
 
-            var entityUpdate = Mapper.Map<PostViewModel, Post>(post);
+            var entityUpdate = new PostViewModel().Map(post);
 
             _postRepository.Update(entityUpdate);
 

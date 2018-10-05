@@ -45,6 +45,7 @@ namespace Ecommerce.Core
         public DbSet<Page> Pages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
+        public  DbSet<Audit> Audits { get; set; }
     }
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<EcommerceDbContext>
     {

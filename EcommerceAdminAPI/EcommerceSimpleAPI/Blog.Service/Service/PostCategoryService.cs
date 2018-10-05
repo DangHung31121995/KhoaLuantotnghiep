@@ -84,14 +84,14 @@ namespace Ecommerce.Service.Service
 
         public PostCategoryViewModel GetById(Guid id)
         {
-            var entity = _postCategoryRepository.AllIncluding(x => x.Posts, x => x.PostCategories)
-                .Where(x => x.Id == id && !x.DeleteBy.HasValue).FirstOrDefault();
+            var entity = _postCategoryRepository
+                .AllIncluding(x => x.Posts, x => x.PostCategories).FirstOrDefault(x => x.Id == id && !x.DeleteBy.HasValue);
 
             if (entity == null)
             {
                 throw new EcommerceException("POST_CATEGORY_NOT_FOUND");
             }
-            return Mapper.Map<PostCategory, PostCategoryViewModel>(entity);
+            return new PostCategoryViewModel();
         }
 
         public void Save()

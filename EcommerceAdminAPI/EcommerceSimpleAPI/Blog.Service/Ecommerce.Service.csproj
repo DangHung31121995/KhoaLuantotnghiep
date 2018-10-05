@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mapping\**" />
+    <EmbeddedResource Remove="Mapping\**" />
+    <None Remove="Mapping\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Mapping\AutoMapperConfig.cs" />
+    <Compile Include="Mapping\DomainMappingToDtoProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="FluentValidation" Version="7.6.103" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />

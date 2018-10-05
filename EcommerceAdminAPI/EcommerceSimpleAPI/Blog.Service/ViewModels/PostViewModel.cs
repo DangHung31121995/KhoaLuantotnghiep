@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Ecommerce.Core.Model;
 
 namespace Ecommerce.Service.ViewModels
 {
-    public class PostViewModel
+    public class PostViewModel: ViewModelBase<Post,PostViewModel>
     {
         public Guid Id { get; set; }
 
